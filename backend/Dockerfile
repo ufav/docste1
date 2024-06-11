@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Выполните команды после запуска контейнера
-CMD ["sh", "-c", "uvicorn main:app --reload & python admin.py"]
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port 8000 --reload & python admin.py"]
